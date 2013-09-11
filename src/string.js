@@ -5,11 +5,6 @@
 
 define(function () {
 
-    var trimer = new RegExp(
-            '(^[\\s\\t\\xa0\\u3000]+)|([\\u3000\\xa0\\s\\t]+$)', 
-            'g'
-        );
-
     function isFunction(obj) {
         return Object.prototype.toString.call(obj) 
             == '[object Function]';
@@ -68,16 +63,7 @@ define(function () {
             return str.replace(/#\{([^}]+)\}/g, function ($0, $1) {
                 return replacer($1);
             });
-        },
-
-        /**
-         * 去掉收尾空格
-         *
-         * @param {string} str
-         * @return {string}
-         */
-        trim: function (str) {
-            return str.replace(trimer, '');
         }
+
     };
 });
