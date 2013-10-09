@@ -41,12 +41,13 @@ define(function() {
 
         it('format', function() {
             var format = string.format;
-            expect(format('Hello,#{name}!', {name: "Saber"})).toBe('Hello,Saber!');
-            expect(format('a#{1}c#{0}', ['d', 'b'])).toBe('abcd');
+            expect(format('Hello,${name}!', {name: "Saber"})).toBe('Hello,Saber!');
+            expect(format('a${1}c${0}', ['d', 'b'])).toBe('abcd');
+            expect(format('a${1}c${0}')).toBe('a${1}c${0}');
             expect(format('empty')).toBe('empty');
             expect(format(null)).toBe('');
             expect(format(undefined)).toBe('');
-            expect(format(12)).toBe('12');
+            expect(format(12)).toBe(12);
         });
     });
 });
