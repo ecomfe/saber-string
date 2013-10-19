@@ -1,18 +1,15 @@
 {
-  "name": "saber-string",
-  "version": "0.1.1",
-  "description": "string utils",
-  "main": "string",
-  "contributors": [
-    {
-      "name": "treelite",
-      "email": "c.xinle@gmail.com"
-    },
-    {
-      "name": "firede",
-      "email": "firede@firede.us"
-    }
-  ],
-  "repository": "git://github.com/ecomfe/saber-string.git",
-  "license": "BSD"
+    "name": "saber-string",
+    "version": "0.1.1",
+    "description": "string utils for mobile browser.",
+    "main": "string",
+    "maintainers": [
+        { "name": "treelite", "email": "c.xinle@gmail.com" }
+    ],
+    "contributors": [
+        { "name": "firede", "email": "firede@firede.us" }
+    ],
+    "license": "BSD",
+    "repository": "git://github.com/ecomfe/saber-string.git",
+    "bugs": "https://github.com/ecomfe/saber-dom/issues"
 }
