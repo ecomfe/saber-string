@@ -1,7 +1,7 @@
 {
     "name": "saber-string",
-    "version": "0.1.1",
-    "description": "string utils for mobile browser.",
+    "version": "0.2.0",
+    "description": "适合移动端的字符串处理模块",
     "main": "string",
     "maintainers": [
         { "name": "treelite", "email": "c.xinle@gmail.com" }
@@ -11,5 +11,5 @@
     ],
     "license": "BSD",
     "repository": "git://github.com/ecomfe/saber-string.git",
-    "bugs": "https://github.com/ecomfe/saber-dom/issues"
+    "bugs": "https://github.com/ecomfe/saber-string/issues"
 }
