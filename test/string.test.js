@@ -49,5 +49,13 @@ define(function() {
             expect(format(undefined)).toBe('');
             expect(format(12)).toBe(12);
         });
+
+        it('camelize', function () {
+            var camelize = string.camelize;
+
+            expect(camelize('ui-button')).toBe('uiButton');
+            expect(camelize('-button')).toBe('Button');
+            expect(camelize('button-')).toBe('button');
+        });
     });
 });
