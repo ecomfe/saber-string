@@ -6,7 +6,7 @@
 
 通过 `edp` 引入模块：
 
-edp import saber-string
+    edp import saber-string
 
 简单的使用示例：
 
