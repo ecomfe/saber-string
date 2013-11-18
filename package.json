@@ -1,8 +1,8 @@
 {
     "name": "saber-string",
-    "version": "0.2.0",
+    "version": "0.2.0-0",
     "description": "适合移动端的字符串处理模块",
-    "main": "string",
+    "main": "main",
     "maintainers": [
         { "name": "treelite", "email": "c.xinle@gmail.com" }
     ],
