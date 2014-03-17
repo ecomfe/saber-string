@@ -11,7 +11,7 @@ define(function () {
      * @return {string}
      */
     function camelize( target ) {
-        return target.replace(/-+(.)?/g, function( match, chr ) {
+        return target.trim().replace(/-+(.)?/g, function( match, chr ) {
             return chr ? chr.toUpperCase() : '';
         });
     }

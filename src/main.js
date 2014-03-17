@@ -9,7 +9,8 @@ define(function (require) {
         encodeHTML: require('./encodeHTML'),
         decodeHTML: require('./decodeHTML'),
         format: require('./format'),
-        camelize: require('./camelize')
+        camelize: require('./camelize'),
+        dasherize: require('./dasherize')
     };
 
 });

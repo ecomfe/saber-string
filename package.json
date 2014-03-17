@@ -1,6 +1,6 @@
 {
     "name": "saber-string",
-    "version": "0.2.0-0",
+    "version": "0.3.0",
     "description": "适合移动端的字符串处理模块",
     "main": "main",
     "maintainers": [
@@ -9,7 +9,13 @@
     "contributors": [
         { "name": "firede", "email": "firede@firede.us" }
     ],
-    "license": "BSD",
+    "scripts": {
+        "test": "./node_modules/.bin/phantomjs test/run-jasmine.js test/runner.html"
+    },
+    "devDependencies": {
+        "phantomjs": "~1.9"
+    },
+    "license": "MIT",
     "repository": "git://github.com/ecomfe/saber-string.git",
     "bugs": "https://github.com/ecomfe/saber-string/issues"
 }

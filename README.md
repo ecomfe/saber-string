@@ -55,7 +55,7 @@ string.format( '#{1}, #{0}!', [ 'Hello', 'Saber' ] );
 
 ### .camelize( str )
 
-驼峰化，例如将`ui-button`转变化`uiButton`。
+驼峰化，例如将 `ui-button` 转变化 `uiButton`。
 
 ```javascript
 string.camelize( 'ui-button' );
@@ -63,6 +63,18 @@ string.camelize( 'ui-button' );
 
 string.camelize( '-webkit-box-shadow' );
 // => WebkitBoxShadow
+```
+
+### .dasherize( str )
+
+转换为中线链接命名，例如将 `backgroundColor` 转换为 `background-color`。
+
+```javascript
+string.dasherize( 'fontSize' );
+// => font-size
+
+string.dasherize( 'WebkitTransform' );
+// => -webkit-transform
 ```
 
 ===

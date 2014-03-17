@@ -41,7 +41,7 @@ define(function() {
 
         it('format', function() {
             var format = string.format;
-            expect(format('Hello,${name}!', {name: "Saber"})).toBe('Hello,Saber!');
+            expect(format('Hello,${name}!', {name: 'Saber'})).toBe('Hello,Saber!');
             expect(format('a${1}c${0}', ['d', 'b'])).toBe('abcd');
             expect(format('a${1}c${0}')).toBe('a${1}c${0}');
             expect(format('empty')).toBe('empty');
@@ -56,6 +56,17 @@ define(function() {
             expect(camelize('ui-button')).toBe('uiButton');
             expect(camelize('-button')).toBe('Button');
             expect(camelize('button-')).toBe('button');
+            expect(camelize(' button ')).toBe('button');
+        });
+
+        it('dasherize', function () {
+            var dasherize = string.dasherize;
+
+            expect(dasherize('dialog')).toBe('dialog');
+            expect(dasherize('Moz')).toBe('-moz');
+            expect(dasherize('WebkitTransform')).toBe('-webkit-transform');
+            expect(dasherize('good boy')).toBe('good-boy');
+            expect(dasherize(' bad boy ')).toBe('bad-boy');
         });
     });
 });
