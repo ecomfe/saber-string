@@ -1,6 +1,6 @@
 {
     "name": "saber-string",
-    "version": "0.2.0-0",
+    "version": "0.3.0",
     "description": "适合移动端的字符串处理模块",
     "main": "main",
     "maintainers": [
