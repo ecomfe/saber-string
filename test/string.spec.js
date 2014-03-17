@@ -58,5 +58,15 @@ define(function() {
             expect(camelize('button-')).toBe('button');
             expect(camelize(' button ')).toBe('button');
         });
+
+        it('dasherize', function () {
+            var dasherize = string.dasherize;
+
+            expect(dasherize('dialog')).toBe('dialog');
+            expect(dasherize('Moz')).toBe('-moz');
+            expect(dasherize('WebkitTransform')).toBe('-webkit-transform');
+            expect(dasherize('good boy')).toBe('good-boy');
+            expect(dasherize(' bad boy ')).toBe('bad-boy');
+        });
     });
 });
