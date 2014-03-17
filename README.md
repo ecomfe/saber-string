@@ -1,4 +1,5 @@
-# saber-string
+saber-string [![Build Status](https://travis-ci.org/ecomfe/saber-string.png)](https://travis-ci.org/ecomfe/saber-string)
+===
 
 适合移动端的字符串处理模块。
 
