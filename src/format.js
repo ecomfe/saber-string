@@ -25,7 +25,7 @@ define(function () {
             return template;
         }
 
-        var replacer = ( typeof data === 'function' )
+        var replacer = (typeof data === 'function')
                 ? data
                 : function (key) {
                     var res = data[key];
