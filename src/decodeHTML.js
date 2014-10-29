@@ -25,7 +25,7 @@ define(function () {
      * HTML解码
      *
      * @public
-     * @param {string} str
+     * @param {string} str 待解码字符串
      * @return {string}
      */
     function decodeHTML(str) {
