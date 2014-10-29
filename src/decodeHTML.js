@@ -46,9 +46,8 @@ define(function () {
             else if (match = code.match(/^#(\d+)$/)) { // jshint ignore: line
                 return String.fromCharCode(parseInt(match[1], 10));
             }
-            else {
-                return entity;
-            }
+
+            return entity;
         });
     }
 
