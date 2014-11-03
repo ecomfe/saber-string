@@ -9,7 +9,7 @@ define(function () {
      * HTML编码
      *
      * @public
-     * @param {string} str
+     * @param {string} str 待编码字符串
      * @return {string}
      */
     function encodeHTML(str) {

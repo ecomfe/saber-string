@@ -12,8 +12,8 @@ define(function () {
      * 用返回的结果加以替换
      *
      * @public
-     * @param {string} template
-     * @param {Object|Array|Function} data
+     * @param {string} template 字符串模板
+     * @param {Object|Array|Function} data 数据
      * @return {string}
      */
     function format(template, data) {
@@ -25,7 +25,7 @@ define(function () {
             return template;
         }
 
-        var replacer = ( typeof data === 'function' )
+        var replacer = typeof data === 'function'
                 ? data
                 : function (key) {
                     var res = data[key];

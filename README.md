@@ -1,82 +1,105 @@
-# saber-string
+saber-string [![Build Status](https://travis-ci.org/ecomfe/saber-string.png)](https://travis-ci.org/ecomfe/saber-string)
+===
 
 适合移动端的字符串处理模块。
 
+## Installation
+
+通过 [edp](https://github.com/ecomfe/edp) 引入模块：
+
+```sh
+edp import saber-string
+```
+
 ## Usage
 
-通过 `edp` 引入模块：
-
-    edp import saber-string
-
-简单的使用示例：
-
-```javascript
+```js
 // `saber-string` 的函数是颗粒化的，您可以只引用需要的部分
-var format = require( 'saber-string/format' );
-var greeting = format( 'Hello, ${name}!', { name: 'World' } );
+var format = require('saber-string/format');
+var greeting = format('Hello, ${name}!', {name: 'World'});
 
-console.log( greeting ); // => Hello, World!
+console.log(greeting); // => Hello, World!
 ```
 
 ## API
 
-### .encodeHTML( str )
+### encodeHTML(str)
 
-HTML编码。
+HTML编码
 
-```javascript
-string.encodeHTML( '<a href="#top">返回首页</a>' );
+* **str** `{string}` 待编码字符串
+* _return_ `{string}`
+
+```js
+string.encodeHTML('<a href="#top">返回首页</a>');
 // => &lt;a href=&quot;#top&quot;&gt;返回首页&lt;/a&gt;
 ```
 
-### .decodeHTML( str )
+### decodeHTML(str)
 
-HTML解码。
+HTML解码
 
-```javascript
-string.decodeHTML( '&lt;b&gt;lo&#45;dash&lt;/b&gt;');
+* **str** `{string}` 待解码字符串
+* _return_ `{string}`
+
+```js
+string.decodeHTML('&lt;b&gt;lo&#45;dash&lt;/b&gt;');
 // => <b>lo-dash</b>
 ```
 
-### .format( template, data )
+### format(template, data)
 
-字符串格式化，替换字符串中的 `${xx}` 字符，将 `xx` 作为 `data` 的字段名或者参数，使用返回的结果加以替换。
+字符串格式化，替换字符串中的 `${xx}` 字符，将 `xx` 作为 `data` 的字段名或者参数，使用返回的结果加以替换
 
-```javascript
-string.format( '${greeting}, ${name}!', {
+* **template** `{string}` 待解码字符串
+* **data** `{Object|Array|Function}` 数据
+* _return_ `{string}`
+
+```js
+// `data` 为 `Object` 时
+string.format('${greeting}, ${name}!', {
     greeting: 'Hello',
     name: 'Saber'
 });
 // => Hello, Saber!
 
-string.format( '#{1}, #{0}!', [ 'Hello', 'Saber' ] );
+// `data` 为 `Array` 时
+string.format('${1}, ${0}!', ['Hello', 'Saber']);
 // => Saber, Hello!
+
+// `data` 为 `Function` 时
+string.format('${greeting}, ${name}!', function (key) {
+    return key === 'name' ? 'Saber' : 'Hi';
+});
+// => Hi, Saber!
 ```
 
-### .camelize( str )
+### camelize(str)
 
-驼峰化，例如将 `ui-button` 转变化 `uiButton`。
+驼峰化，例如将 `ui-button` 转变化 `uiButton`
 
-```javascript
-string.camelize( 'ui-button' );
+* **target** `{string}` 目标字符串
+* _return_ `{string}`
+
+```js
+string.camelize('ui-button');
 // => uiButton
 
-string.camelize( '-webkit-box-shadow' );
+string.camelize('-webkit-box-shadow');
 // => WebkitBoxShadow
 ```
 
-### .dasherize( str )
+### dasherize(str)
 
-转换为中线链接命名，例如将 `backgroundColor` 转换为 `background-color`。
+转换为中线链接命名，例如将 `backgroundColor` 转换为 `background-color`
 
-```javascript
-string.dasherize( 'fontSize' );
+* **target** `{string}` 目标字符串
+* _return_ `{string}`
+
+```js
+string.dasherize('fontSize');
 // => font-size
 
-string.dasherize( 'WebkitTransform' );
+string.dasherize('WebkitTransform');
 // => -webkit-transform
 ```
-
-===
-
-[![Saber](https://f.cloud.github.com/assets/157338/1485433/aeb5c72a-4714-11e3-87ae-7ef8ae66e605.png)](http://ecomfe.github.io/saber/)
