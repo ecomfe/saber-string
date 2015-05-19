@@ -1,0 +1,32 @@
+{
+  "name": "saber-string",
+  "version": "1.0.0",
+  "description": "适合移动端的字符串处理模块",
+  "main": "main",
+  "maintainers": [
+    {
+      "name": "treelite",
+      "email": "c.xinle@gmail.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "firede",
+      "email": "firede@firede.us"
+    }
+  ],
+  "devDependencies": {
+    "phantomjs": "~1.9"
+  },
+  "license": "MIT",
+  "repository": "git://github.com/ecomfe/saber-string.git",
+  "bugs": "https://github.com/ecomfe/saber-string/issues",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "doc",
+    "demo"
+  ]
+}
